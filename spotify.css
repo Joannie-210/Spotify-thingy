@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --spfy-green: #1ed760;
+    --spfy-black-one: #1f1f1f;
+    --spfy-black-two: #121212;
+}
+
+@font-face {
+    font-family: spfy-reg;
+    src: url(assets/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+    background: linear-gradient(to right, black,  #0a0a0a, var(--spfy-black-one), #2a2a2a);
+    height: 100vh;
+}
+section {
+    margin: auto;
+    width: 70%;
+    height: 100%;
+}
+form {
+    max-width: 680px;
+    margin: auto;
+    border: 0;
+    margin-top: 70px;
+}
+
+label {
+    color: white;
+    font-family: spfy-reg;
+    font-size: 28px;
+}
+input[type = text] {
+    display: block;
+    width: 600px;
+    max-width: 600px;
+    margin-top: 32px;
+    margin-bottom: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: inherit;
+    border-bottom: 1px solid var(--spfy-green);
+    color: white;
+    font-size: 18px;
+    padding-left: 10px;
+}
+input[type = text]:focus {
+    box-shadow:  -2px 3px 10px var(--spfy-green);
+    border-radius: 10px;
+    transition: 0.3s ease;
+    transform: scale(1.025);
+}
+input[type = radio] {
+    display: block;
+}
+
+.radio-label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    margin-right: 6px;
+  }
+  
+  input[type="radio"]:checked + .radio-label {
+    border: 2px solid var(--spfy-green);
+  }
+
+  .radio-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 49.5%;
+  transform: translate(-55%, -60%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--spfy-green);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+input[type="radio"]:checked + .radio-label::after {
+  opacity: 1;
+}
+.one {
+    margin-top: 15px;
+}
+input[type = "radio"] {
+    opacity: 0;
+
+}
+.mins {
+    font-size: 18px;
+}
+.top {
+    display: block;
+    margin-top: 40px;
+}
+.wrap {
+    color: var(--spfy-green)
+}
+button {
+    display: block;
+    width: 600px;
+    height: 45px;
+    margin-top: 35px;
+    margin-bottom: 40px;
+    background: var(--spfy-green);
+    color: black;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: inherit;
+    color: #1ed760;
+    border: 1px solid #1ed760;
+    transition: 0.4s ease;
+    box-shadow: -2px 2px 5px #1ed760;
+}
+@media (max-width: 770px) {
+    input[type = text] {
+        max-width: 480px;
+    }
+    button {
+        width: 480px;
+    }
+    #first-name {
+        font-size: 20px;
+    }
+    input[type=text]::placeholder {
+        font-size: 17px;
+    }
+    #min {
+        font-size: 20px;
+        width: 100%;
+    }
+    .wrap {
+        width: 100%;
+    }
+    @media (max-width: 610px) {
+        input[type = text] {
+            max-width: 400px;
+            font-size: 16px;
+        }
+        button {
+            width: 400px;
+        }
+
+    }
+
+    @media (max-width: 510px) {
+        input[type = text] {
+            max-width: 350px;
+        }
+
+        button {
+            width: 350px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        input[type = text] {
+            max-width: 300px;
+        }
+
+        button {
+            width: 300px;
+        }
+
+        #first-name, #min {
+            font-size: 17px;
+        }
+
+        .radio-label {
+            width: 12px;
+            height: 12px;
+        }
+        .mins {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 380px) {
+        input[type = text] {
+            max-width: 250px;
+        }
+
+        button {
+            width: 250px;
+        }
+    }
+
+    @media (max-width: 330px) {
+        input[type = text] {
+            max-width: 220px;
+        }
+
+        button {
+            width: 220px;
+        }
+
+        #first-name, #min {
+            font-size: 15px;
+        }
+
+        .min {
+            font-size: 15px;
+        }
+    }
+}

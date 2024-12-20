@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrapped Result</title>
+    <style>
+        body, html {
+            overflow-x: hidden;
+        }
+        body {
+            background:   #0a0a0a;
+        }
+        @font-face {
+            font-family: spfy-reg;
+            src: url(assets/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
+        }
+        h1 {
+            margin-top: 100px;
+            font-family: spfy-reg;
+            position: relative;
+            text-align: center;
+        }
+        #smallT {
+            font-family: spfy-reg;
+            transform: translateX(500px);
+            margin-top: 0;
+            transition: transform 1.7s ease, color 1.7s ease;
+            word-spacing: 3px;
+            display: block;
+            text-align: center;
+        }
+
+        #otherT {
+            display: none;
+            font-family: spfy-reg;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        p {
+          text-align: center;
+          display: none;
+          color: #1ed760;
+          font-family: spfy-reg;
+          width: 700px;
+          margin: auto;
+          word-spacing: 3px;
+          line-height: 1.8rem;
+        }
+        .curve-right {
+          width:250px;
+          height: 130px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #1ed760;
+          border-bottom-right-radius: 100%;
+          display: flex;
+          justify-content: center;
+         }
+         .curve-right svg {
+            margin-top: 10px;
+            width: 70px;
+            height: 70px;
+         }
+        
+        h3 {
+        color: black;
+        position: absolute; 
+        bottom: 0; 
+        right: 0; 
+        margin: 0; 
+        text-align: center;
+        width: 350px;
+        height: 250px;
+        background: #0a0a0a;
+        border: 1px solid #1ed760;
+        border-bottom: none;
+        border-right: none;
+        border-top-left-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: spfy-reg;
+        font-size: 23px;
+        text-align: center;
+        color: #1ed760;
+}
+@media (min-width: 1290px) {
+    #otherT {
+        display: none;
+    }
+}
+@media (max-width: 1290px) {
+    h1{
+        font-size: 22px;
+    }
+    h2 {
+        transform: translateX(800px);
+        font-size: 19px;
+    }
+    #otherT {
+        display: none;
+    }
+}
+
+@media (max-width: 1220px) {
+   #smallT {
+    display: none;
+   }
+   #otherT {
+    text-align: center;
+    transform: translateX(1000px);
+    transition: 0.9s ease-in-out;
+    display: block;
+   }
+}
+
+@media (max-width: 1205px) {
+    #otherT {
+  
+    transform: translateX(1200px);
+    transition: 0.9s ease-in-out;
+    display: block;
+   }
+}
+
+@media (max-width: 1140px) {
+    p {
+    width: 70%;
+    }
+}
+
+@media (max-width: 1110px) {
+    p {
+        width: 79%;
+    }
+}
+
+@media (max-width: 880px) {
+    #otherT {
+        font-size: 18px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px)   {
+    .curve-right {
+        width: 150px;
+        height: 80px;
+    }
+
+    .curve-right svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    h3 {
+        width: 250px;
+        height: 150px;
+        font-size: 17px;
+    }
+
+@media (max-width: 420px) {
+    #otherT {
+        width: 92%;
+    }
+
+    p {
+        width: 90%;
+    }
+}
+
+@media (max-width: 370px) {
+    #otherT {
+        font-size: 15.8px;
+        width: 90%;
+    }
+}
+    
+}
+    </style>
+</head>
+<body>
+    <div class="curve-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"/></svg>
+    </div>
+    <h1 id="bigT"></h1>
+    <h2 id="smallT"></h2>
+    <h2 id="otherT">You listen, we judge! What does your Spotify Wrapped say about you? Let's have it!</h2>
+    <p id="message"></p>
+
+   
+        <h3>Vibes Unwrapped</h2>
+  
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const name = localStorage.getItem("name") || "Guest";
+            const selectedRadio = localStorage.getItem("selectedRadio");
+
+            const firstText = document.getElementById("bigT");
+            const secText = document.getElementById("smallT");
+            const result = document.getElementById("message");
+            const otherText = document.getElementById("otherT")
+
+            firstText.textContent = `HEY ${name}!`;
+            firstText.style.color = "#1ed760"; 
+
+            setTimeout(() => {
+                secText.textContent = "You listen, we judge! What does your Spotify Wrapped say about you? Let's have it!";
+                secText.style.color = "white";
+                secText.style.transform = "translateX(15px)";
+                otherText.style.color = "white";
+                otherText.style.transform = "translateX(35px)";
+                
+            }, 100);
+
+            if (name && selectedRadio) {
+                let response = "";
+                switch(selectedRadio) {
+                    case 'Less than 1,000 😣':
+                        response = `Damn though...Less than a thousand minutes? What are you, a millenial? You probably have bad taste anyway, which is why you steer clear from your music apps. Life must suck though, when the only music you've ever faced are your life's problems.  `;
+                        break;
+                    case '1,000 to 10,000 🥱':
+                        response = `So let me get this, you thought it was gonna be higher right? LOL. The wannabe vibes I'm sensing here is sending me 😂. Your minutes are miserable but not entirely repulsive I guess, I'll give you an 'E' for the effort.`;
+                        break;
+                    case '10,000 to 30,000 🙄':
+                        response = `Hmm, a little too decent for me, pretty average time spent on music; you're probably an ordinary person that enjoys the most basic, generic kind of music. Your vibe is probably as tasty as water.`;
+                        break;
+                    case '30,000 to 60,000 😐':
+                        response = `You probably genuinely like music and listen to it in healthy amounts, that's admirable😊, and I sense a greate taste too! You seem chill, I'm into that.`;
+                        break;
+                    case '60,000 to 80,000 😬':
+                        response = `Someone's competitive 👀, I must say, your minutes a pretty impressive; For folks like you, music just hits different and you just want to bask in its allure everyday, endlessly. Your taste is mostly likely fire, and that makes you a pretty interesting individual. :)`;
+                        break;
+                    case '80,000 and above 🤯':
+                        response = `Nah, people like your scare me, and no, not in an entirely good way. Sure, your minutes go crazy, but I sense a high chance that at times, you just let your music play to compound minutes. Nevermind me, I'm only jelly. Anyway, I was reading the book of numbers yesterday, and your's wasn't there, 😎 hope you catch my drift.`;
+                        break;
+                    default:
+                        response = `Hey ${name.toUpperCase()}! It looks like we missed your Spotify Wrapped information.`;
+                }
+
+                setTimeout(() => {
+                result.textContent = response;
+                result.style.color = "#1ed760";
+                result.style.display = "block";
+                result.style.transition = "0.9s ease-in-out"
+            }, 4000);
+
+            }
+        });
+    </script>
+</body>
+</html>

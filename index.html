@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Wrapped Review</title>
+    <link href="spotify.css" rel="stylesheet">
+</head>
+<body>
+    <section>
+    <form method="POST" id="nameform">
+
+    <label for="name" id="first-name">Hey, what's the name?</label>
+    <input type="text" placeholder="Enter your name" id="name" required>
+
+    <label for="spotify" id="min">How many minutes you've got from your <span class="wrap">Spotify Wrapped?</span>👀</label>
+   
+    <label class="mins">
+        <input type="radio" name="choice" value="Less than 1,000 😣" class="choices">
+        <span class="radio-label"></span>
+       Less than 1,000 😣
+    </label>
+
+    <label class="mins">
+        <input type="radio" name="choice" value="1,000 to 10,000 🥱" class="choices">
+        <span class="radio-label"></span>
+       1,000 to 10,000 🥱
+    </label>
+
+    <label class="mins">
+        <input type="radio" name="choice" value="10,000 to 30,000 🙄" class="choices">
+        <span class="radio-label"></span>
+       10,000 to 30,000 🙄
+    </label>
+
+    <label class="mins">
+        <input type="radio" name="choice" value="30,000 to 60,000 😐" class="choices">
+        <span class="radio-label"></span>
+       30,000 to 60,000 😐
+    </label>
+
+    <label class="mins">
+        <input type="radio" name="choice" value="60,000 to 80,000 😬" class="choices">
+        <span class="radio-label"></span>
+       60,000 to 80,000 😬
+    </label>
+
+    <label class="mins">
+        <input type="radio" name="choice" value="80,000 and above 🤯" class="choices">
+      <span class="radio-label"></span>
+       80,000 and above 🤯
+    </label>
+
+    <button type="button" class="submit">Submit</button>
+
+
+    </form>
+    </section>
+    <script src="spotify.js"></script>
+</body>
+</html>
